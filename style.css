@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+}
+.flex-container {
+	display: -webkit-flex;
+	display: flex;  
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	text-align: center;
+}
+.flex-container > * {
+	padding: 15px;
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+}
+header {
+	height: 40px;
+	width: 100vw;
+	padding: 20px;
+	background-color: black;
+	color: white;
+}
+h1 {
+	margin: 0;
+}
+article {
+	height: calc(100vh - 150px);
+	width: 100vw;
+	background-color: #e6e6e6;
+}
+footer {
+	height: 20px;
+	width: 100vw;
+	background-color: #aaa;
+	color: white;
+}
