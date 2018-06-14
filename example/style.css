@@ -34,3 +34,37 @@ footer {
 	background-color: #aaa;
 	color: white;
 }
+ul {
+	text-align: left;
+	list-style: none;
+}
+li {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.color-holder {
+	float: left;
+}
+.color-holder:nth-child(even) {
+	padding-right: 10px;
+}
+.color-holder:nth-child(odd) {
+	padding-left: 10px;
+}
+li h1 {
+	padding-bottom: 10px;
+}
+.color-holder span {
+	display: block;
+	height: 25px;
+	width: 155px;
+	background-color: #ddd;
+}
+.color-holder input {
+	width: 151px;
+}
+.color-holder input,
+.color-holder p {
+	margin-top: 10px;
+}

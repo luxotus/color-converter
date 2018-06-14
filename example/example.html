@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Color Converter - Example</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="../color-converter.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="flex-container">
+		  <header>
+		  	<h1>Color Converter</h1>
+		  </header>
+		  <article>
+		  	<ul>
+		  		<li>
+		  			<h1>RGB to Hex</h1>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<input type="text" id="rgb2hex" name="rgb2hex" value="rgb(51, 153, 255)">
+		  			</div>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<p>#3399ff</p>
+		  			</div>
+		  			
+		  		</li>
+		  		<li>
+		  			<h1>RGBA to 8-Digit Hex</h1>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<input type="text" id="rgb2hex8digit" name="rgb2hex8digit" value="rgba(0, 255, 158, 0.85)">
+		  			</div>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<p>#00ff9ed9</p>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<h1>Hex to RGB</h1>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<input type="text" id="hex2rgb" name="hex2rgb" value="#8e00ff">
+		  			</div>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<p>rgb(142, 0, 255)</p>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<h1>Shorthand Hex to RGB</h1>
+		  			<div class="color-holder">
+		  				<span></span>
+			  			<input type="text" id="hex2rgb-sh" name="hex2rgb-sh" value="#018">
+			  		</div>
+			  		<div class="color-holder">
+		  				<span></span>
+			  			<p>rgb(0, 17, 136)</p>
+			  		</div>
+
+		  		</li>
+		  		<li>
+		  			<h1>8-Digit Hex to RGBA</h1>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<input type="text" id="hex8digit2rgb" name="hex8digit2rgb" value="#008888c9">
+		  			</div>
+		  			<div class="color-holder">
+		  				<span></span>
+		  				<p>rgba(0, 136, 136, 0)</p>
+		  			</div>
+		  		</li>
+		  	</ul>
+		  </article>
+		  <footer>Copyright &copy; Luxotus</footer>
+		</div>
+	</body>
+</html>
