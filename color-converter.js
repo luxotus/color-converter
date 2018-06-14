@@ -4,8 +4,24 @@ function componentToHex(c) {
 }
 
 // Change this basic function to handle rgba and can convert to 8 digit hex if needed
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+function rgbToHex(color) {
+	var hexOrMessage = "";
+
+	if (color.match(/\((.*)\)/) !== null) {
+		var rgbArr = color.match(/\((.*)\)/)[1].split(",");
+
+		if (rgbArr.length == 4) { // rgba will have 4 values
+
+		} else {
+			hexOrMessage = "#" + componentToHex(parseInt(rgbArr[0])) + componentToHex(parseInt(rgbArr[1])) + componentToHex(parseInt(rgbArr[2]));
+		}
+		
+	}
+	else {
+		hexOrMessage = "not a valid rgb(#,#,#)";
+	}
+
+	return hexOrMessage;
 }
 
 // Change function to handle 8 digit hex colors, where the last 2 digits correspond to opacity
