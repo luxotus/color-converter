@@ -20,8 +20,6 @@ $(document).ready(function() {
 	$(document).on("change paste keyup", "input", function() {
 		var inputVal = $(this).val().trim();
 
-		console.log("inputVal: " + inputVal);
-
 		if (inputVal.includes("rgb")) {
 			color = rgbToHex(inputVal);
 		}
