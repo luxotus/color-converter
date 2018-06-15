@@ -31,7 +31,7 @@ function rgbToHex(color) {
         return "#" + componentToHex(parseInt(rgbArr[0])) + componentToHex(parseInt(rgbArr[1])) + componentToHex(parseInt(rgbArr[2])) + alpha;
 	}
 	else {
-		return "not a valid rgb(#,#,#) or rgba(#,#,#,#)";
+		return false;
 	}
 }
 
@@ -58,13 +58,13 @@ function hexToRgbA(hex) {
     } else if (/^#([A-Fa-f0-9]{4}){1,2}$/.test(hex)) { // 8 digit hex color
     	c = hex.substring(1).split('');
     	c = '0x'+c.join('');
-        red = (c>>16)&255;
-        green = (c>>8)&255;
-        blue = c&255;
+        red = (c>>24)&255;
+        green = (c>>16)&255;
+        blue = (c>>8)&255;;
         alpha = alphaHex(c&255);
 
     	return 'rgba(' + [red, green, blue].join(',') + ',' + alpha +')';
     } else {
-        return 'not a valid hex';
+        return false;
     }
 }

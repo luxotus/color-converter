@@ -1,7 +1,38 @@
-$(document).ready(function(){
-	// Only done this way till color-converter.js is finished
-	$(".color-holder").each(function(){
-		var tempColor = ($(this).find("input").length) ? $(this).find("input").val() : $(this).find("p").text();
-		$(this).find("span").css("background-color", tempColor);
+$(document).ready(function() {
+	$(".color-list li").each(function() {
+		var color = "";
+		var inputVal = $(this).find("input").val().trim();
+
+		if (inputVal.includes("rgb")) {
+			color = rgbToHex(inputVal);
+		}
+		else if (inputVal.charAt(0) == "#") {
+			color = hexToRgbA(inputVal);
+		}
+
+		if (color != "") 
+		{
+			$(this).find("span").css("background-color", color);
+			$(this).find("p").text(color);
+		}
+	});
+
+	$(document).on("change paste keyup", "input", function() {
+		var inputVal = $(this).val().trim();
+
+		console.log("inputVal: " + inputVal);
+
+		if (inputVal.includes("rgb")) {
+			color = rgbToHex(inputVal);
+		}
+		else if (inputVal.charAt(0) == "#") {
+			color = hexToRgbA(inputVal);
+		}
+
+		if (color != "") 
+		{
+			$(this).closest("li").find("span").css("background-color", color);
+			$(this).closest("li").find("p").text(color);
+		}
 	});
 });
