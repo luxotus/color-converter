@@ -60,7 +60,7 @@ function hexToRgbA(hex) {
     	c = '0x'+c.join('');
         red = (c>>24)&255;
         green = (c>>16)&255;
-        blue = (c>>8)&255;;
+        blue = (c>>8)&255;
         alpha = alphaHex(c&255);
 
     	return 'rgba(' + [red, green, blue].join(',') + ',' + alpha +')';
